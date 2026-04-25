@@ -1,27 +1,46 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #667eea, #764ba2);
-  color: #333;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
 }
 
 .container {
-  max-width: 500px;
-  margin: 60px auto;
-  background: #fff;
+  max-width: 600px;
+  margin: 50px auto;
+  background: white;
   border-radius: 16px;
-  padding: 30px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-  text-align: center;
+  padding: 25px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.2);
 }
 
 h1 {
-  margin-bottom: 5px;
+  text-align: center;
 }
 
-.subtitle {
-  color: #777;
+.form-box {
+  display: flex;
+  gap: 10px;
   margin-bottom: 20px;
+}
+
+.form-box input {
+  flex: 1;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.form-box button {
+  padding: 10px 15px;
+  border: none;
+  background: #4facfe;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form-box button:hover {
+  background: #3a8dde;
 }
 
 .user-list {
@@ -30,14 +49,29 @@ h1 {
 }
 
 .user-list li {
-  background: #f5f7ff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f1f5ff;
   margin: 10px 0;
-  padding: 12px;
+  padding: 10px;
   border-radius: 10px;
-  transition: 0.2s;
 }
 
-.user-list li:hover {
-  background: #e0e7ff;
-  transform: scale(1.03);
+.actions button {
+  margin-left: 5px;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.edit {
+  background: orange;
+  color: white;
+}
+
+.delete {
+  background: red;
+  color: white;
 }
