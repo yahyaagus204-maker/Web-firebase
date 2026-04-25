@@ -31,7 +31,7 @@ let editId = null;
 // LOAD DATA
 async function loadData() {
   list.innerHTML = "";
-  const querySnapshot = await getDocs(collection(db, "users"));
+  const querySnapshot = await getDocs(collection(db, "user"));
 
   querySnapshot.forEach((docSnap) => {
     const data = docSnap.data();
@@ -54,7 +54,7 @@ async function loadData() {
 
     // DELETE
     li.querySelector(".delete").onclick = async () => {
-      await deleteDoc(doc(db, "users", docSnap.id));
+      await deleteDoc(doc(db, "user", docSnap.id));
       loadData();
     };
 
@@ -69,12 +69,12 @@ saveBtn.onclick = async () => {
 
   if (editId) {
     // UPDATE
-    await updateDoc(doc(db, "users", editId), { nama });
+    await updateDoc(doc(db, "user", editId), { nama });
     editId = null;
     saveBtn.textContent = "Tambah";
   } else {
     // TAMBAH
-    await addDoc(collection(db, "users"), { nama });
+    await addDoc(collection(db, "user"), { nama });
   }
 
   namaInput.value = "";
