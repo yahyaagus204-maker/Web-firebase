@@ -10,9 +10,13 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.0.0/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "API_KAMU",
-  authDomain: "PROJECT_KAMU.firebaseapp.com",
-  projectId: "PROJECT_KAMU"
+  apiKey: "AIzaSyAYV_1T_lXY2p0jm9OjUUEa_njGkMOgxNo",
+  authDomain: "perpustakaan-mini-520b3.firebaseapp.com",
+  projectId: "perpustakaan-mini-520b3",
+  storageBucket: "perpustakaan-mini-520b3.firebasestorage.app",
+  messagingSenderId: "970165492656",
+  appId: "1:970165492656:web:66153994a892bd5c6d9475",
+  measurementId: "G-2PFF7JX42F"
 };
 
 const app = initializeApp(firebaseConfig);
